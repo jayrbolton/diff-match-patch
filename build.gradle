@@ -7,3 +7,18 @@ dependencies {
 }
 
 repositories { jcenter() }
+
+version = '0.0.1'
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version
+        )
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
